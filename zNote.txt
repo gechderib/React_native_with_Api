@@ -1,0 +1,36 @@
+* navigation
+required packages
+    npm install @react-navigation/native
+    expo install react-native-screens react-native-safe-area-context // for expo
+    npm install react-native-screens react-native-safe-area-context // for bare native app
+
+    If you're on a Mac and developing for iOS
+        npx pod-install ios
+    If you work with bare react ntive 
+        react-native-screens package requires one additional configuration step to properly work on Android devices. Edit MainActivity.java file which is located in android/app/src/main/java/<your package name>/MainActivity.java.
+
+        Add the following code to the body of MainActivity class:
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(null);
+        }
+        and make sure to add an import statement at the top of this file:
+
+        import android.os.Bundle;
+wrap your app in <NavigationContainer>rest of your app code.. </NavigationContainer>
+
+install the native_stack library which require the above libraries installed
+npm install @react-navigation/native-stack
+
+createNativeStackNavigator is a function that returns an object containing 2 properties: Screen and Navigator
+
+NavigationContainer is a component which manages our navigation tree and contains the navigation state.
+
+to movie between screens we have two option
+    1. using context , useContext hook and provide the data at the root (recomanded)
+    2. using render callback for screen
+
+
+There are three key properties to use when customizing the style of your header: headerStyle, headerTintColor, and headerTitleStyle.
+
