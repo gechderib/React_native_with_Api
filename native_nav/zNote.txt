@@ -1,0 +1,5 @@
+navigation bottomTab ansd Drawer in react nativ
+install 
+    npm install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs @react-navigation/drawer
+dependency used for gesture animation and transition 
+    npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
